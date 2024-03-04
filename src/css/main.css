@@ -1,0 +1,215 @@
+/* :root {
+	--font-family: 'Redaction Regular', Verdana, Tahoma, sans-serif;
+} */
+
+html {
+	width: 100vw;
+	height: 100vh;
+	margin: 0;
+	padding: 0;
+	scroll-behavior: smooth;
+	overflow-x: hidden;
+}
+
+body {
+	background-color: #f8f8f8;
+	overflow-x: hidden;
+	color: #1b1b1b;
+	/* font-family: var(--font-family); */
+	font-family: 'Redaction Regular', Verdana, Tahoma, sans-serif;
+}
+
+/* Scrollbar */
+*::-webkit-scrollbar {
+	width: 8px;
+	background: transparent;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+	background: transparent;
+	width: 5px;
+}
+
+/* Handle */
+/* *::-webkit-scrollbar-thumb {
+	background-color: darkorchid;
+	border-radius: 3px;
+} */
+
+/* Selection */
+*::selection {
+	color: orangered;
+	background: transparent;
+}
+
+/* Content */
+.wrapper {
+	margin: 0;
+	padding: 2rem;
+	padding-left: 3rem;
+	padding-right: 3rem;
+}
+
+.container {
+	position: relative;
+	display: flex;
+	height: 100vh;
+	z-index: 0;
+	/* flex-shrink: 1; */
+	flex-direction: column;
+}
+
+/* #header {
+	justify-content: space-evenly;
+} */
+
+nav {
+	position: sticky;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	display: flex;
+	align-items: center;
+	/* justify-content: space-between; */
+}
+
+/* Highlight */
+.highlight-link {
+	text-decoration: none;
+	background-image: linear-gradient(
+		to right,
+		rgba(254, 255, 162, 0.8) 0%,
+		rgba(254, 255, 162, 0.8) 50%,
+		rgb(0, 0, 0) 50%,
+		rgb(0, 0, 0) 100%
+	);
+	background-position: 100% 100%;
+	background-repeat: no-repeat;
+	background-size: 200% 1px;
+	transition: background-position 0.5s ease 0.3s, background-size 0.3s ease 0s;
+	padding: 2px 0px;
+}
+
+.highlight-link:hover {
+	background-position: 0% 100%;
+	background-size: 200% 22px;
+	transition: background-position 0.3s ease 0s, background-size 0.5s ease 0.3s;
+}
+
+/* Div Grid */
+.grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: 1;
+	grid-column-gap: 0px;
+	grid-row-gap: 0px;
+}
+
+/* Main Grid */
+.grid-2 {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(5, 1fr);
+	grid-column-gap: 0px;
+	grid-row-gap: 0px;
+}
+
+/* Footer Grid */
+.grid-3 {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: 1;
+	grid-column-gap: 0px;
+	grid-row-gap: 0px;
+}
+
+/* If four <grid-line> values are specified, 
+    grid-row-start is set to the first value, 
+    grid-column-start is set to the second value, 
+    grid-row-end is set to the third value, and 
+    grid-column-end is set to the fourth value. */
+
+#navName {
+	/* Span from column 1 to column 3 */
+	/* grid-area: 1 / 1 / 1 / 3; */
+	grid-area: 1 / 3 / 1 / 3;
+	align-self: start;
+}
+#navName-desc {
+	grid-area: 2 / 2 / 2 / 5;
+	align-items: center;
+	padding-left: 0.25rem;
+	padding-right: 0.5rem;
+}
+
+#navTab {
+	/* grid-row-start: 1;
+	grid-column-start: 5; */
+	grid-area: 1 / 3 / 2 / 4;
+	align-self: start;
+}
+
+#footerUpdate {
+	grid-column-start: 3;
+	/* grid-row-end: 2; */
+	grid-column-end: 4;
+}
+
+.div3 {
+	grid-area: 2 / 1 / 4 / 3;
+}
+.div4 {
+	grid-area: 2 / 3 / 4 / 4;
+}
+
+/* Heading */
+h1 {
+	font-size: 3rem;
+}
+
+/* Footer for the main page */
+footer {
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.footer-main {
+	position: static;
+	bottom: 0;
+	width: 100%;
+	/* text-align: left; */
+	margin: 0;
+	/* padding-top: 1rem; */
+	/* color: darkorchid; */
+	font-family: 'Redaction Italic', Verdana, Tahoma, sans-serif;
+}
+
+/* Interesting Hover Effects */
+.scramble {
+	/* what width to get the scramble to stop jiggling?? */
+	width: 200px;
+}
+
+/* Back on top! */
+.scroll-up {
+	position: fixed;
+	right: 0.5%;
+	bottom: 3%;
+	cursor: pointer;
+}
+
+.up-arrow {
+	width: 3rem;
+	height: 3rem;
+}
+
+.rotate {
+	transform: rotate(45deg);
+
+	/* Safari */
+	-webkit-transform: rotate(45deg);
+
+	/* Firefox */
+	-moz-transform: rotate(45deg);
+}
