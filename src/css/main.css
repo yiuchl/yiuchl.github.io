@@ -23,6 +23,26 @@ body {
 	font-family: "Redaction Regular", Verdana, Tahoma, sans-serif;
 }
 
+main {
+	position: relative;
+	min-height: 100vh;
+}
+
+a:hover {
+	color: #ff0080;
+	transition: ease 500ms;
+}
+
+i:hover {
+	color: #ff0080;
+	transition: ease 500ms;
+}
+
+.scramble:hover {
+	color: #ff0080;
+	transition: ease 500ms;
+}
+
 /* Scrollbar */
 *::-webkit-scrollbar {
 	width: 8px;
@@ -81,7 +101,7 @@ body {
 
 .container {
 	/* position: relative; */
-	display: flex;
+	display: contents;
 	height: 100vh;
 	z-index: 0;
 	/* flex-shrink: 1; */
@@ -125,7 +145,7 @@ nav {
 .grid-3 {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
-	/* grid-template-rows: 1; */
+	grid-template-rows: 1;
 	grid-gap: var(--spacing-unit);
 }
 
@@ -156,12 +176,6 @@ nav {
 	align-self: start;
 }
 
-#footerUpdate {
-	grid-column-start: 3;
-	/* grid-row-end: 2; */
-	grid-column-end: 4;
-}
-
 /* .div3 {
 	grid-area: 2 / 1 / 4 / 3;
 }
@@ -171,15 +185,17 @@ nav {
 
 /* Heading */
 h1 {
-	font-size: 3rem;
+	font-size: 3.25rem;
 }
 
 h2 {
-	font-size: 1.5rem;
+	/* font-size: 1.5rem; */
+	font-size: 2rem;
 }
 
 h3 {
-	font-size: 0.8rem;
+	/* font-size: 0.8rem; */
+	font-size: 1rem;
 	/* font-family: 'Redaction Italic', Verdana, Tahoma, sans-serif; */
 }
 
@@ -249,37 +265,34 @@ p {
 	display: block;
 }
 
-main {
-	position: relative;
-	min-height: 100%;
-}
-
 /* Footer for the main page */
 footer {
 	display: flex;
-	width: 100%;
 	justify-content: space-between;
-	align-content: center;
-	z-index: 30;
-	bottom: 0;
 	margin: 0;
 	padding: 0;
 }
 
 .footer {
-	/* width: 100%; */
 	font-family: "Redaction Italic", Verdana, Tahoma, sans-serif;
-
-	align-content: center;
-	position: absolute;
-	z-index: 30;
 	bottom: 0;
+	/* width: 100vw; */
+	flex-grow: 1;
+	text-align: left;
 	margin: 0;
 	padding: 0;
+	display: grid;
+	z-index: 30;
+	align-items: center;
+	padding-bottom: 0.5rem;
+	/* justify-items: end; */
+	/* grid-area: 1/1/3/3; */
+}
 
-	display: flex;
-	justify-content: space-between;
-	align-items: flex-end;
+#footerUpdate {
+	grid-column-start: 3;
+	/* grid-row-end: 2; */
+	grid-column-end: 4;
 }
 
 /* Interesting Hover Effects */
@@ -291,43 +304,35 @@ footer {
 /* Back on top! */
 .scroll-up {
 	position: fixed;
-	right: 0.5%;
-	bottom: 3%;
+	/* right: 0.5%; */
+	bottom: 1.29%;
 	cursor: pointer;
 	z-index: 40;
 }
 
-.up-arrow {
-	width: 3rem;
-	height: 3rem;
-	z-index: 40;
+#scroll-up-arrow {
+	font-size: 3rem;
+	padding-right: 3rem;
 }
 
 .rotate {
 	transform: rotate(45deg);
-
 	/* Safari */
 	-webkit-transform: rotate(45deg);
-
 	/* Firefox */
 	-moz-transform: rotate(45deg);
+	padding: 0;
 }
 
-.rotate90 {
-	transform: rotate(90deg);
-
-	/* Safari */
-	-webkit-transform: rotate(90deg);
-
-	/* Firefox */
-	-moz-transform: rotate(90deg);
+.socials {
+	display: flex;
+	flex-direction: column;
+	position: fixed;
+	right: 1%;
+	bottom: 50%;
 }
-.rotate270 {
-	transform: rotate(270deg);
 
-	/* Safari */
-	-webkit-transform: rotate(270deg);
-
-	/* Firefox */
-	-moz-transform: rotate(270deg);
+.socicon {
+	width: 2rem;
+	height: 2rem;
 }
