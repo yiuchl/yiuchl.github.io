@@ -24,6 +24,7 @@
 	/* IE 10 and IE 11 */
 	user-select: none;
 	/* Standard syntax */
+	cursor: move;
 }
 
 #burst-12 {
@@ -31,7 +32,7 @@
 	width: 100px;
 	height: 100px;
 	position: absolute;
-	z-index: 20;
+	z-index: 100;
 	margin: 0;
 	padding: 3%;
 	display: flex;
@@ -40,7 +41,8 @@
 	align-content: center;
 	align-items: center;
 	text-align: center;
-	right: 80px;
+	right: 1300px;
+	top: 390px;
 	cursor: grab;
 }
 
