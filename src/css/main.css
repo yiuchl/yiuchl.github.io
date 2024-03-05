@@ -1,6 +1,6 @@
 :root {
 	--font-family: "Redaction Regular", Verdana, Tahoma, sans-serif;
-	--spacing-unit: 0.5rem;
+	--spacing-unit: 0.75rem;
 	--large: 1rem;
 	--normal: 0.5rem;
 	--small: 0.33rem;
@@ -176,13 +176,6 @@ nav {
 	align-self: start;
 }
 
-/* .div3 {
-	grid-area: 2 / 1 / 4 / 3;
-}
-.div4 {
-	grid-area: 2 / 3 / 4 / 4;
-} */
-
 /* Heading */
 h1 {
 	font-size: 3.25rem;
@@ -204,11 +197,8 @@ p {
 	padding-top: 1rem;
 }
 
-/* Content */
 .project {
-	/* height: 100%; */
 	position: static;
-	/* display: grid; */
 }
 
 .project img {
@@ -276,7 +266,6 @@ footer {
 .footer {
 	font-family: "Redaction Italic", Verdana, Tahoma, sans-serif;
 	bottom: 0;
-	/* width: 100vw; */
 	flex-grow: 1;
 	text-align: left;
 	margin: 0;
@@ -290,18 +279,15 @@ footer {
 }
 
 #footerUpdate {
-	grid-column-start: 3;
-	/* grid-row-end: 2; */
-	grid-column-end: 4;
+	grid-column: 3 / 4;
 }
 
 /* Interesting Hover Effects */
 .scramble {
-	/* what width to get the scramble to stop jiggling?? */
 	width: 200px;
 }
 
-/* Back on top! */
+/* Back on top! https://youtu.be/Ob7vObnFUJc?si=H5uDjLf0NspdRxuy */
 .scroll-up {
 	position: fixed;
 	/* right: 0.5%; */
@@ -321,6 +307,22 @@ footer {
 	-webkit-transform: rotate(45deg);
 	/* Firefox */
 	-moz-transform: rotate(45deg);
+	padding: 0;
+}
+.rotate90 {
+	transform: rotate(90deg);
+	/* Safari */
+	-webkit-transform: rotate(90deg);
+	/* Firefox */
+	-moz-transform: rotate(90deg);
+	padding: 0;
+}
+.rotate270 {
+	transform: rotate(270deg);
+	/* Safari */
+	-webkit-transform: rotate(270deg);
+	/* Firefox */
+	-moz-transform: rotate(270deg);
 	padding: 0;
 }
 
