@@ -23,12 +23,20 @@
 			type="text/css"
 			href="./src/css/slide.css" />
 		<link
+			rel="stylesheet"
+			type="text/css"
+			href="./src/css/sticker.css" />
+		<link
 			rel="shortcut icon"
 			type="image/png"
 			href="./src/assets/images/favicon-01/favicon.ico" />
 		<script
 			type="text/javascript"
 			src="./src/js/main.js"
+			defer></script>
+		<script
+			type="text/javascript"
+			src="./src/js/sticker.js"
 			defer></script>
 		<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 		<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
@@ -105,7 +113,6 @@
 				<div class="project grid-2 carousel">
 					<!-- DSNY -->
 					<div class="p2 carousel-container">
-
 						<video
 							class="looping-video"
 							autoplay
@@ -211,7 +218,7 @@
 					</div>
 				</div>
 				<div class="footer-spacer"></div>
-				
+
 				<!-- Footer -->
 				<footer class="grid-3 footer">
 					<!-- &#x2661; or &#x2665; -->
@@ -219,25 +226,48 @@
 					<p id="footerUpdate">last seen 03/04/2024 @1:59pm</p>
 				</footer>
 			</div>
-		
 		</main>
 
 		<div class="socials">
-			<a href="https://www.linkedin.com/in/yiuchloe/" target="_blank"
-			  >LinkedIn</a>
-			<a href="chloeyyiu@gmail.com" target="_blank"
-			  >Contact</a>
+			<a
+				href="https://www.linkedin.com/in/yiuchloe/"
+				target="_blank"
+				>LinkedIn</a
+			>
+			<a
+				href="chloeyyiu@gmail.com"
+				target="_blank"
+				>Contact</a
+			>
 			<!--
 				resume 
 				<a href="#" target="_blank"
 			  	>Resume</a>
 			-->
 
-		<!-- push/click the arrow to scroll up -->
-		<div class="scroll-up">
-			<i id="scroll-up">
-			<p id="scroll-up-arrow" class="rotate">&#11110;</p>
-		</i>
+			<!-- push/click the arrow to scroll up -->
+			<div class="scroll-up">
+				<i id="scroll-up">
+					<p
+						id="scroll-up-arrow"
+						class="rotate">
+						&#11110;
+					</p>
+				</i>
+			</div>
+			<!-- Stickers -->
+			<button type="button">
+				<div
+					id="burst-12"
+					draggable="true">
+					<h2
+						id="bursty"
+						class="sticker-text">
+						MADE WITH LOVE
+					</h2>
+				</div>
+			</button>
+			
 		</div>
 	</body>
 </html>
