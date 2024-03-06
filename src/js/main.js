@@ -9,7 +9,6 @@ const randomInt = (max) => Math.floor(Math.random() * max);
 const randomFromArray = (array) => array[randomInt(array.length)];
 
 // *>⋆&@#✧.%$-_:/✿;?!
-// 𓆝 𓆟 𓆞 𓆝 𓆟
 const scrambleText = (text) => {
 	const chars = "hardatwork".split("");
 	return text
@@ -31,7 +30,6 @@ element.addEventListener("mouseout", () => {
 });
 
 // Back to top!
-// scroll to top functionality
 const scrollUp = document.querySelector("#scroll-up");
 
 scrollUp.addEventListener("click", () => {
@@ -46,15 +44,22 @@ scrollUp.addEventListener("click", () => {
 const changeText = document.getElementById("footerUpdate");
 const textOptions = [
 	"excited to get to know you",
-	"you found me",
 	"would love to chat",
-	"and snacking",
+	"°❀⋆.ೃ࿔*:･",
 	"and dreaming",
-	"see you soon",
-	"how about you?",
+	"addicted to sauerkraut chips",
+	"what are you up to?",
 	"xoxo",
+	":)",
+	"best wishes",
+	"𓆝⋆｡˚𓆟 𓆞⋆｡˚•𓆝 ⋆⭒𓆟",
 ];
-//  on sauerkraut chips
+// ❦ , ♥ , ♡ , ❤︎ , ✿ , ₊ ⊹ , °❀⋆.ೃ࿔*:･
+// ⋆𓆟⋆｡˚𓆝 𓆟 ⋆⭒𓆟⋆｡˚𖦹𓆜✩⋆𓆞⋆𓆟
+// 	"⋆⭒𓆟⋆𓆝⋆｡˚𓆟 𓆞⋆｡˚⭒𓆝 ⋆𓆟",
+// "you found me", 	"and snacking",
+// ":p",
+// ":0",
 
 function getRandomText() {
 	const randomIndex = Math.floor(Math.random() * textOptions.length);
@@ -75,6 +80,27 @@ $(function () {
 		// Change cursor to indicate draggable element
 		cursor: "move",
 	});
+});
+
+// Copy Email
+function copyEmail() {
+	// Get the text field
+	var copyText = document.getElementById("email");
+
+	// Select the text field
+	copyText.select();
+	copyText.setSelectionRange(0, 99999); // For mobile devices
+
+	// Copy the text inside the text field
+	navigator.clipboard.writeText(copyText.value);
+
+	// Alert the copied text
+	// alert("Copied email: " + copyText.value);
+}
+
+// Click event handler for copying email
+$("button#copyEmail").click(function () {
+	copyEmail();
 });
 
 // Slides?

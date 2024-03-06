@@ -68,7 +68,7 @@ let myColors = [
 	"rgb(33, 33, 33)",
 ];
 
-$("button").click(function () {
+$("button#colorChange").click(function () {
 	let randomColor = myColors[Math.trunc(Math.random() * myColors.length)];
 	$("p").css("color", randomColor);
 });

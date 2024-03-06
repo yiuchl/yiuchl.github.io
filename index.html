@@ -49,7 +49,8 @@
 		<!-- Header -->
 		<header id="header">
 			<nav class="grid">
-				<h1 id="navTab"><a href="./src/and.html">[&]</a></h1>
+				<!-- <h1 id="navTab"><a href="./src/and.html">[&]</a></h1> -->
+				<h1 id="navTab"><a href="">[&]</a></h1>
 				<div>
 					<h1 id="navName"><a href="index.html">Chloe Yiu</a></h1>
 					<p
@@ -94,7 +95,7 @@
 
 					<div class="project-desc">
 						<h2>Which Then Reveals Another</h2>
-						<h3>2023<br />Editorial, Website, Print</h3>
+						<h3>2023<br />Editorial Design, Web Design</h3>
 						<p>
 							Multiple perspectives converge to form a complex tapestry of truth
 							in an exploration of truth, beauty, and their convergence.
@@ -143,11 +144,11 @@
 					<div class="project-desc">
 						<h2>DSNY-GRAFFITI-TRACKING-MANHATTAN</h2>
 						<h3>2023</h3>
-						<h3>Data Visualization</h3>
+						<h3>Web Design</h3>
 						<p>
-							Editorial perspective on reported graffiti incidences in Manhattan
-							from January 1, 2022, to January 5, 2022, and their corresponding
-							resolutions.
+							Editorial data visualization of reported graffiti incidences in
+							Manhattan from January 1, 2022, to January 5, 2022, and their
+							corresponding resolutions.
 						</p>
 						<p>
 							The report is on your
@@ -175,7 +176,7 @@
 					<div class="project-desc">
 						<h2>Beyond the Glass</h2>
 						<h3>2023</h3>
-						<h3>Print</h3>
+						<h3>Editorial Design</h3>
 						<p>
 							Reflective publication about the window being a signifier of home.
 						</p>
@@ -228,7 +229,7 @@
 				<footer class="grid-3 footer">
 					<!-- &#x2661; or &#x2665; -->
 					<h3 class="scramble">*.❀⋆ currently creating</h3>
-					<h3 id="footerUpdate">last seen 03/05/2024 @10:20pm</h3>
+					<h3 id="footerUpdate">last seen 03/06/2024 @5:25am</h3>
 				</footer>
 			</div>
 		</main>
@@ -239,11 +240,21 @@
 				target="_blank"
 				>LinkedIn</a
 			>
-			<a
-				href="chloeyyiu@gmail.com"
-				target="_blank"
-				>Contact</a
-			>
+			<!-- Contact/Email/Connect -->
+			<div>
+				<input
+					type="text"
+					value="chloeyyiu@gmail.com"
+					id="email" />
+				<a
+					><button
+						id="copyEmail"
+						onclick="copyEmail()">
+						Email
+					</button></a
+				>
+			</div>
+
 			<!-- <a
 				id="and-tiny"
 				href="./src/and.html"
@@ -269,7 +280,9 @@
 		</div>
 
 		<!-- Stickers -->
-		<button type="button">
+		<button
+			id="colorChange"
+			type="button">
 			<div
 				id="burst-12"
 				draggable="true">
