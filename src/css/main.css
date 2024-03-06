@@ -19,7 +19,6 @@ body {
 	background-color: #f8f8f8;
 	overflow-x: hidden;
 	color: #1b1b1b;
-	/* font-family: var(--font-family); */
 	font-family: "Redaction Regular", Verdana, Tahoma, sans-serif;
 }
 
@@ -111,7 +110,6 @@ nav {
 	z-index: 1;
 	display: flex;
 	align-items: center;
-	/* justify-content: space-between; */
 }
 
 /* Div Grid */
@@ -119,20 +117,15 @@ nav {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	grid-template-rows: 1;
-	/* grid-column-gap: 0px;
-	grid-row-gap: 0px; */
 	grid-gap: var(--spacing-unit);
-	/* margin: var(--spacing-unit); */
 }
 
 /* Main Grid */
 .grid-2 {
 	display: grid;
-	/* grid-template-columns: repeat(3, 1fr); */
-	/* grid-template-rows: repeat(2, 1fr); */
+
 	grid-row: 1;
 	grid-template-columns: repeat(12, 1fr);
-	/* grid-gap: var(--spacing-unit); */
 	grid-column-gap: var(--spacing-unit);
 	flex-wrap: wrap;
 }
@@ -152,8 +145,6 @@ nav {
     grid-column-end is set to the fourth value. */
 
 #navName {
-	/* Span from column 1 to column 3 */
-	/* grid-area: 1 / 1 / 1 / 3; */
 	grid-area: 1 / 3 / 1 / 3;
 	align-self: start;
 }
@@ -166,8 +157,6 @@ nav {
 }
 
 #navTab {
-	/* grid-row-start: 1;
-	grid-column-start: 5; */
 	grid-area: 1 / 3 / 2 / 4;
 	align-self: start;
 }
@@ -178,14 +167,11 @@ h1 {
 }
 
 h2 {
-	/* font-size: 1.5rem; */
 	font-size: 2rem;
 }
 
 h3 {
-	/* font-size: 0.8rem; */
 	font-size: 1rem;
-	/* font-family: 'Redaction Italic', Verdana, Tahoma, sans-serif; */
 }
 
 p {
@@ -236,7 +222,6 @@ p {
 /* for when things need to scale down a bit */
 .scale-down {
 	object-fit: scale-down;
-	/* padding: 1rem; */
 	max-width: 100%;
 	align-content: center;
 	justify-content: space-around;
@@ -269,11 +254,8 @@ footer {
 	padding: 0;
 	display: grid;
 	z-index: 30;
-	/* align-items: center; */
 	align-items: start;
 	padding-bottom: 0.5rem;
-	/* justify-items: end; */
-	/* grid-area: 1/1/3/3; */
 }
 
 #footerUpdate {
@@ -290,7 +272,7 @@ footer {
 	transition: ease 500ms;
 }
 
-/* Back on top! https://youtu.be/Ob7vObnFUJc?si=H5uDjLf0NspdRxuy */
+/* https://youtu.be/Ob7vObnFUJc?si=H5uDjLf0NspdRxuy */
 .scroll-up {
 	position: fixed;
 	/* right: 0.5%; */
@@ -316,18 +298,14 @@ footer {
 
 .rotate90 {
 	transform: rotate(90deg);
-	/* Safari */
 	-webkit-transform: rotate(90deg);
-	/* Firefox */
 	-moz-transform: rotate(90deg);
 	padding: 0;
 }
 
 .rotate270 {
 	transform: rotate(270deg);
-	/* Safari */
 	-webkit-transform: rotate(270deg);
-	/* Firefox */
 	-moz-transform: rotate(270deg);
 	padding: 0;
 }
@@ -369,15 +347,11 @@ footer {
 	}
 
 	#navName-desc {
-		/* grid-column: 1 / -1; */
-		/* padding-left: 5rem; */
-		/* padding-right: 10rem; */
 		padding-right: 21rem;
 	}
 
 	#navTab {
 		font-size: 2rem;
-		/* hide for now */
 		display: none;
 	}
 }
@@ -408,14 +382,14 @@ footer {
 
 	#navTab {
 		font-size: 2rem;
-		/* hide for now */
 		display: none;
 	}
 
 	/* Define a flexbox layout for the container */
 	.project {
 		display: flex;
-		flex-direction: column; /* Stack items vertically */
+		/* Stack items vertically */
+		flex-direction: column;
 	}
 
 	.scale-down {
@@ -451,12 +425,11 @@ footer {
 	/* Make the video container take up the full width */
 	.carousel-container {
 		flex: 1;
-		order: 1; /* Change the order to move it to the bottom */
+		order: 1;
 	}
 
-	/* Adjust margins, paddings, or any other styles as needed */
 	.project-desc {
-		order: 2; /* Change the order to move it to the top */
+		order: 2;
 	}
 
 	#and-tiny {
