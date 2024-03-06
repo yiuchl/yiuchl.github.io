@@ -65,7 +65,7 @@ let myColors = [
 	"blue",
 	"darkviolet",
 	"mediumslateblue",
-	"rgb(33, 33, 33)",
+	// "rgb(33, 33, 33)",
 ];
 
 $("button#colorChange").click(function () {

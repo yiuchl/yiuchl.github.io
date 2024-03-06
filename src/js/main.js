@@ -103,6 +103,39 @@ $("button#copyEmail").click(function () {
 	copyEmail();
 });
 
+// Dark mode
+const modeSwitch = () => {
+	let e = document.body;
+	e.classList.toggle("darkMode");
+
+	// Toggle footer spacer classes
+	const footerSpacers = document.querySelectorAll(".footer-spacer");
+	footerSpacers.forEach((spacer) => {
+		spacer.classList.toggle("footer-spacer-darkMode");
+	});
+
+	// Toggle button visibility based on dark mode
+	// If i have this, maybe no Made With Love for the <p>
+	const colorChangeButton = document.getElementById("colorChange");
+	if (e.classList.contains("darkMode")) {
+		colorChangeButton.classList.add("hidden");
+		document.querySelectorAll(".text-color-darkMode").forEach((element) => {
+			element.classList.add("light-text");
+		});
+		document.querySelectorAll(".highlight-link").forEach((element) => {
+			element.classList.add("darkModeHighlightLink");
+		});
+	} else {
+		colorChangeButton.classList.remove("hidden");
+		document.querySelectorAll(".text-color-darkMode").forEach((element) => {
+			element.classList.remove("light-text");
+		});
+		document.querySelectorAll(".highlight-link").forEach((element) => {
+			element.classList.remove("darkModeHighlightLink");
+		});
+	}
+};
+
 // Slides?
 let slideIndex = [1, 1];
 let slideId = ["slide1", "slide2"];

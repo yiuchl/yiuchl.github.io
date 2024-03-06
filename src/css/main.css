@@ -247,6 +247,10 @@ p {
 	display: block;
 }
 
+.footer-spacer-darkMode {
+	background-color: #f8f8f8;
+}
+
 /* Footer for the main page */
 footer {
 	display: flex;
@@ -354,6 +358,27 @@ footer {
 #copyEmail:active {
 	color: #ff0080;
 }
+
+.darkMode {
+	background-color: #1b1b1b;
+	color: #f8f8f8;
+}
+
+/* .darkMode a:hover {
+	font-family: "Redaction Italic", Verdana, Tahoma, sans-serif;
+} */
+
+.hidden {
+	display: none;
+}
+
+.light-text {
+	color: #f8f8f8;
+}
+
+/* .darkModeHighlightLink {
+
+} */
 
 /* Media query */
 @media only screen and (max-width: 900px) {
