@@ -269,7 +269,8 @@ footer {
 	padding: 0;
 	display: grid;
 	z-index: 30;
-	align-items: center;
+	/* align-items: center; */
+	align-items: start;
 	padding-bottom: 0.5rem;
 	/* justify-items: end; */
 	/* grid-area: 1/1/3/3; */
@@ -338,6 +339,7 @@ footer {
 	position: fixed;
 	right: 1%;
 	bottom: 50%;
+	text-align: right;
 }
 
 .socicon {
@@ -345,18 +347,125 @@ footer {
 	height: 2rem;
 }
 
+#and-tiny {
+	display: none;
+}
+
 /* Media query */
-@media only screen and (max-width: 850) {
-	body {
-		/* background-color: red; */
+@media only screen and (max-width: 900px) {
+	#navTab {
+		display: none;
 	}
 
-	p {
+	.project-desc h3 {
+		/* font-family: "Redaction Italic", Verdana, Tahoma, sans-serif; */
+		opacity: 45%;
 	}
 }
 
-@media only screen and (max-width: 500px) {
-	body {
-		/* background-color: aqua; */
+@media only screen and (max-width: 850px) {
+	.grid {
+		display: flex;
+	}
+
+	#navName-desc {
+		/* grid-column: 1 / -1; */
+		/* padding-left: 5rem; */
+		/* padding-right: 10rem; */
+		padding-right: 21rem;
+	}
+
+	#navTab {
+		font-size: 2rem;
+		/* hide for now */
+		display: none;
+	}
+}
+
+@media only screen and (max-width: 810px) {
+	#navName-desc {
+		display: inline-block;
+		flex-direction: row;
+		flex-wrap: wrap;
+		padding-left: 0.25rem;
+		padding-right: 0.5rem;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	.grid {
+		display: inline;
+	}
+
+	#navName {
+		position: relative;
+	}
+
+	#navName-desc {
+		text-align: left;
+		align-content: center;
+	}
+
+	#navTab {
+		font-size: 2rem;
+		/* hide for now */
+		display: none;
+	}
+
+	/* Define a flexbox layout for the container */
+	.project {
+		display: flex;
+		flex-direction: column; /* Stack items vertically */
+	}
+
+	.scale-down {
+		padding: 1rem;
+	}
+
+	/* Style the video container */
+	.carousel-container {
+		/* Add styles as needed */
+	}
+
+	/* Style the project description */
+	.project-desc h2 {
+		font-size: 1.5rem;
+	}
+
+	.project-desc h3 {
+		font-size: 16px;
+		opacity: 45%;
+	}
+
+	.project-desc p {
+		font-size: 16px;
+		padding-top: 0.5rem;
+		/* color: #ff0080; */
+	}
+
+	/* Change flex-direction to stack items horizontally */
+	.project {
+		flex-direction: row;
+	}
+
+	/* Make the video container take up the full width */
+	.carousel-container {
+		flex: 1;
+		order: 1; /* Change the order to move it to the bottom */
+	}
+
+	/* Adjust margins, paddings, or any other styles as needed */
+	.project-desc {
+		order: 2; /* Change the order to move it to the top */
+	}
+
+	#and-tiny {
+		display: block;
+	}
+}
+
+@media only screen and (max-width: 430px) {
+	.scale-down {
+		padding: 0;
 	}
 }

@@ -42,6 +42,31 @@ scrollUp.addEventListener("click", () => {
 	});
 });
 
+// Change on click
+const changeText = document.getElementById("footerUpdate");
+const textOptions = [
+	"excited to get to know you",
+	"you found me",
+	"would love to chat",
+	"and snacking",
+	"and dreaming",
+	"see you soon",
+	"how about you?",
+	"xoxo",
+];
+//  on sauerkraut chips
+
+function getRandomText() {
+	const randomIndex = Math.floor(Math.random() * textOptions.length);
+	return textOptions[randomIndex];
+}
+
+function changeRandomText() {
+	changeText.textContent = getRandomText();
+}
+
+changeText.addEventListener("click", changeRandomText);
+
 // Initialize draggable functionality for div elements
 $(function () {
 	$(".draggable-div").draggable({

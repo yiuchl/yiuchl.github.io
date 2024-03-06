@@ -72,3 +72,23 @@ $("button").click(function () {
 	let randomColor = myColors[Math.trunc(Math.random() * myColors.length)];
 	$("p").css("color", randomColor);
 });
+
+// Function to hide sticker elements when viewport width is less than 850 pixels
+function hideStickerOnMobile() {
+	const stickerElements = document.querySelectorAll(
+		"#burst-12, #bursty, .sticker-text"
+	);
+	if (window.innerWidth < 850) {
+		stickerElements.forEach((element) => {
+			element.style.display = "none";
+		});
+	} else {
+		stickerElements.forEach((element) => {
+			element.style.display = ""; // Reset to default display value
+		});
+	}
+}
+
+// Call the function initially and whenever the window is resized
+hideStickerOnMobile();
+window.addEventListener("resize", hideStickerOnMobile);

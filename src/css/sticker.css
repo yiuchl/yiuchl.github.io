@@ -1,7 +1,4 @@
-#burst-12:active {
-	cursor: grabbing;
-}
-
+/* Star Sticker */
 .sticker-text {
 	margin: 0;
 	padding: 0;
@@ -19,11 +16,8 @@
 	height: 100%;
 	z-index: 19;
 	-webkit-user-select: none;
-	/* Safari */
 	-ms-user-select: none;
-	/* IE 10 and IE 11 */
 	user-select: none;
-	/* Standard syntax */
 	cursor: move;
 }
 
@@ -41,9 +35,13 @@
 	align-content: center;
 	align-items: center;
 	text-align: center;
-	right: 1250px;
-	top: 390px;
+	left: 6rem;
+	top: 50rem;
 	cursor: grab;
+}
+
+#burst-12:active {
+	cursor: grabbing;
 }
 
 #bursty {
