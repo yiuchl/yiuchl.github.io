@@ -115,7 +115,6 @@ const modeSwitch = () => {
 	});
 
 	// Toggle button visibility based on dark mode
-	// If i have this, maybe no Made With Love for the <p>
 	const colorChangeButton = document.getElementById("colorChange");
 	if (e.classList.contains("darkMode")) {
 		colorChangeButton.classList.add("hidden");
