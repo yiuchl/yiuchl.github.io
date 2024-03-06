@@ -38,11 +38,6 @@ i:hover {
 	transition: ease 500ms;
 }
 
-.scramble:hover {
-	color: #ff0080;
-	transition: ease 500ms;
-}
-
 /* Scrollbar */
 *::-webkit-scrollbar {
 	width: 8px;
@@ -108,6 +103,7 @@ i:hover {
 	flex-wrap: wrap;
 }
 
+/* Navigation Bar */
 nav {
 	position: sticky;
 	top: 0;
@@ -197,6 +193,7 @@ p {
 	padding-top: 1rem;
 }
 
+/* Projects */
 .project {
 	position: static;
 }
@@ -217,7 +214,6 @@ p {
 }
 
 .p1 {
-	/* rcrc */
 	grid-area: 1 / 1 / 1 / 9;
 }
 
@@ -237,6 +233,7 @@ p {
 	grid-area: 1 / 1 / 5 / 9;
 }
 
+/* for when things need to scale down a bit */
 .scale-down {
 	object-fit: scale-down;
 	/* padding: 1rem; */
@@ -287,6 +284,11 @@ footer {
 	width: 200px;
 }
 
+.scramble:hover {
+	color: #ff0080;
+	transition: ease 500ms;
+}
+
 /* Back on top! https://youtu.be/Ob7vObnFUJc?si=H5uDjLf0NspdRxuy */
 .scroll-up {
 	position: fixed;
@@ -301,6 +303,7 @@ footer {
 	padding-right: 3rem;
 }
 
+/* Rotations */
 .rotate {
 	transform: rotate(45deg);
 	/* Safari */
@@ -309,6 +312,7 @@ footer {
 	-moz-transform: rotate(45deg);
 	padding: 0;
 }
+
 .rotate90 {
 	transform: rotate(90deg);
 	/* Safari */
@@ -317,6 +321,7 @@ footer {
 	-moz-transform: rotate(90deg);
 	padding: 0;
 }
+
 .rotate270 {
 	transform: rotate(270deg);
 	/* Safari */
@@ -326,6 +331,7 @@ footer {
 	padding: 0;
 }
 
+/* Socials ;p */
 .socials {
 	display: flex;
 	flex-direction: column;
@@ -337,4 +343,20 @@ footer {
 .socicon {
 	width: 2rem;
 	height: 2rem;
+}
+
+/* Media query */
+@media only screen and (max-width: 850) {
+	body {
+		/* background-color: red; */
+	}
+
+	p {
+	}
+}
+
+@media only screen and (max-width: 500px) {
+	body {
+		/* background-color: aqua; */
+	}
 }
