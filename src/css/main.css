@@ -54,12 +54,6 @@ button {
 	width: 5px;
 }
 
-/* Handle */
-/* *::-webkit-scrollbar-thumb {
-	background-color: darkorchid;
-	border-radius: 3px;
-} */
-
 /* Selection */
 *::selection {
 	color: orangered;
@@ -103,9 +97,39 @@ button {
 	display: contents;
 	height: 100vh;
 	z-index: 0;
-	/* flex-shrink: 1; */
 	flex-wrap: wrap;
 }
+
+/* Div Grid */
+/* If four <grid-line> values are specified, 
+    grid-row-start is set to the first value, 
+    grid-column-start is set to the second value, 
+    grid-row-end is set to the third value, and 
+    grid-column-end is set to the fourth value. */
+	.grid {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: 1;
+		grid-gap: var(--spacing-unit);
+	}
+	
+	/* Main Grid */
+	.grid-2 {
+		display: grid;
+	
+		grid-row: 1;
+		grid-template-columns: repeat(12, 1fr);
+		grid-column-gap: var(--spacing-unit);
+		flex-wrap: wrap;
+	}
+	
+	/* Footer Grid */
+	.grid-3 {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: 1;
+		grid-gap: var(--spacing-unit);
+	}
 
 /* Navigation Bar */
 nav {
@@ -116,38 +140,6 @@ nav {
 	display: flex;
 	align-items: center;
 }
-
-/* Div Grid */
-.grid {
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	grid-template-rows: 1;
-	grid-gap: var(--spacing-unit);
-}
-
-/* Main Grid */
-.grid-2 {
-	display: grid;
-
-	grid-row: 1;
-	grid-template-columns: repeat(12, 1fr);
-	grid-column-gap: var(--spacing-unit);
-	flex-wrap: wrap;
-}
-
-/* Footer Grid */
-.grid-3 {
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	grid-template-rows: 1;
-	grid-gap: var(--spacing-unit);
-}
-
-/* If four <grid-line> values are specified, 
-    grid-row-start is set to the first value, 
-    grid-column-start is set to the second value, 
-    grid-row-end is set to the third value, and 
-    grid-column-end is set to the fourth value. */
 
 #navName {
 	grid-area: 1 / 3 / 1 / 3;
@@ -205,7 +197,6 @@ p {
 }
 
 .project-desc h3 {
-	/* I had this at the smaller screen size but i kinda like it */
 	opacity: 45%;
 }
 
@@ -237,20 +228,6 @@ p {
 	justify-content: space-around;
 }
 
-.footer-spacer {
-	background-color: #1b1b1b;
-	height: 1px;
-	flex-grow: 1;
-	margin-top: 1.5rem;
-	margin-bottom: 1.5rem;
-	align-self: baseline;
-	display: block;
-}
-
-.footer-spacer-darkMode {
-	background-color: #f8f8f8;
-}
-
 /* Footer for the main page */
 footer {
 	display: flex;
@@ -275,6 +252,20 @@ footer {
 #footerUpdate {
 	grid-column: 3 / 4;
 	cursor: pointer;
+}
+
+.footer-spacer {
+	background-color: #1b1b1b;
+	height: 1px;
+	flex-grow: 1;
+	margin-top: 1.5rem;
+	margin-bottom: 1.5rem;
+	align-self: baseline;
+	display: block;
+}
+
+.footer-spacer-darkMode {
+	background-color: #f8f8f8;
 }
 
 /* Interesting Hover Effects */
@@ -347,6 +338,7 @@ footer {
 	display: none;
 }
 
+/* Email */
 #email {
 	display: none;
 }
@@ -359,14 +351,11 @@ footer {
 	color: #ff0080;
 }
 
+/* Dark mode */
 .darkMode {
 	background-color: #1b1b1b;
 	color: #f8f8f8;
 }
-
-/* .darkMode a:hover {
-	font-family: "Redaction Italic", Verdana, Tahoma, sans-serif;
-} */
 
 .hidden {
 	display: none;
@@ -376,19 +365,10 @@ footer {
 	color: #f8f8f8;
 }
 
-/* .darkModeHighlightLink {
-
-} */
-
-/* Media query */
+/* Media queries */
 @media only screen and (max-width: 900px) {
 	#navTab {
 		display: none;
-	}
-
-	.project-desc h3 {
-		/* font-family: "Redaction Italic", Verdana, Tahoma, sans-serif; */
-		opacity: 45%;
 	}
 }
 
@@ -439,17 +419,11 @@ footer {
 	/* Define a flexbox layout for the container */
 	.project {
 		display: flex;
-		/* Stack items vertically */
 		flex-direction: column;
 	}
 
 	.scale-down {
 		padding: 1rem;
-	}
-
-	/* Style the video container */
-	.carousel-container {
-		/* Add styles as needed */
 	}
 
 	/* Style the project description */

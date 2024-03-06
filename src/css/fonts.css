@@ -21,7 +21,6 @@
 	font-style: normal;
 }
 
-/* 	font-family: 'Redaction Italic', Verdana, Tahoma, sans-serif; */
 @font-face {
 	font-family: 'Redaction Italic';
 	src: url('/src/assets/fonts/Redaction/Redaction-Italic.woff2') format('woff2');

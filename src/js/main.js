@@ -1,5 +1,4 @@
 // text scramble
-// classes container and scramble
 let interval;
 
 const element = document.querySelector(".scramble");
@@ -40,7 +39,7 @@ scrollUp.addEventListener("click", () => {
 	});
 });
 
-// Change on click
+// Change text on click
 const changeText = document.getElementById("footerUpdate");
 const textOptions = [
 	"excited to get to know you",
@@ -54,12 +53,6 @@ const textOptions = [
 	"best wishes",
 	"𓆝⋆｡˚𓆟 𓆞⋆｡˚•𓆝 ⋆⭒𓆟",
 ];
-// ❦ , ♥ , ♡ , ❤︎ , ✿ , ₊ ⊹ , °❀⋆.ೃ࿔*:･
-// ⋆𓆟⋆｡˚𓆝 𓆟 ⋆⭒𓆟⋆｡˚𖦹𓆜✩⋆𓆞⋆𓆟
-// 	"⋆⭒𓆟⋆𓆝⋆｡˚𓆟 𓆞⋆｡˚⭒𓆝 ⋆𓆟",
-// "you found me", 	"and snacking",
-// ":p",
-// ":0",
 
 function getRandomText() {
 	const randomIndex = Math.floor(Math.random() * textOptions.length);
@@ -77,7 +70,7 @@ $(function () {
 	$(".draggable-div").draggable({
 		// Restrict dragging within the document
 		containment: "document",
-		// Change cursor to indicate draggable element
+		// Change cursor to indicate draggable eleent
 		cursor: "move",
 	});
 });
