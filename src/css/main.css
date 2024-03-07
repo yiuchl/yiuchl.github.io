@@ -106,30 +106,30 @@ button {
     grid-column-start is set to the second value, 
     grid-row-end is set to the third value, and 
     grid-column-end is set to the fourth value. */
-	.grid {
-		display: grid;
-		grid-template-columns: repeat(3, 1fr);
-		grid-template-rows: 1;
-		grid-gap: var(--spacing-unit);
-	}
-	
-	/* Main Grid */
-	.grid-2 {
-		display: grid;
-	
-		grid-row: 1;
-		grid-template-columns: repeat(12, 1fr);
-		grid-column-gap: var(--spacing-unit);
-		flex-wrap: wrap;
-	}
-	
-	/* Footer Grid */
-	.grid-3 {
-		display: grid;
-		grid-template-columns: repeat(3, 1fr);
-		grid-template-rows: 1;
-		grid-gap: var(--spacing-unit);
-	}
+.grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: 1;
+	grid-gap: var(--spacing-unit);
+}
+
+/* Main Grid */
+.grid-2 {
+	display: grid;
+
+	grid-row: 1;
+	grid-template-columns: repeat(12, 1fr);
+	grid-column-gap: var(--spacing-unit);
+	flex-wrap: wrap;
+}
+
+/* Footer Grid */
+.grid-3 {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: 1;
+	grid-gap: var(--spacing-unit);
+}
 
 /* Navigation Bar */
 nav {
@@ -397,6 +397,7 @@ footer {
 	}
 }
 
+/* Mobile */
 @media only screen and (max-width: 600px) {
 	.grid {
 		display: inline;
@@ -459,6 +460,14 @@ footer {
 
 	#and-tiny {
 		display: block;
+	}
+
+	.scroll-up {
+		display: none;
+	}
+
+	#scroll-up-arrow {
+		display: none;
 	}
 }
 

@@ -50,6 +50,8 @@ const textOptions = [
 	"what are you up to?",
 	"xoxo",
 	":)",
+	"♥︎",
+	"always made with love",
 	"best wishes",
 	"𓆝⋆｡˚𓆟 𓆞⋆｡˚•𓆝 ⋆⭒𓆟",
 ];
