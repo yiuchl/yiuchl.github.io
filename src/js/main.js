@@ -10,7 +10,7 @@ const randomFromArray = (array) => array[randomInt(array.length)];
 // *>⋆&@#✧.%$-_:/✿;?!
 // hardatwork
 const scrambleText = (text) => {
-	const chars = "here".split("");
+	const chars = "".split("");
 	return text
 		.split("")
 		.map((x) => (randomInt(3) > 1 ? randomFromArray(chars) : x))
