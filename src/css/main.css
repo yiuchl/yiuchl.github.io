@@ -486,6 +486,10 @@ footer {
 	cursor: e-resize;
 }
 
+.then_media{
+	object-fit: cover; height: 100%;
+}
+
 /* Media queries */
 @media (min-width: 3072px) {
 	.wrapper {
@@ -688,6 +692,18 @@ footer {
 	.span-spacer {
 		height: 45vh;
 	}
+
+	img {
+		max-width: 100%;
+		height: auto;
+	}
+
+	/* Target videos */
+	video {
+		max-width: 100%;
+		height: auto;
+	}
+
 }
 
 @media only screen and (max-width: 430px) {
