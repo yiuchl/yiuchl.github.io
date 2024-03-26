@@ -1,6 +1,7 @@
 :root {
 	--font-family: "Redaction Regular", Verdana, Tahoma, sans-serif;
-	--spacing-unit: 0.75rem;
+	/* --spacing-unit: 0.75rem; */
+	--spacing-unit: 1.25rem;
 	--large: 1rem;
 	--normal: 0.5rem;
 	--small: 0.33rem;
@@ -158,32 +159,64 @@ nav {
 	align-self: start;
 }
 
+/* If I have the span-spacer, get rid of the ampersand. */
+.span-spacer {
+	display: inline-block;
+	height: 60vh;
+	background-color: transparent;
+}
+
 /* Heading */
 h1 {
-	font-size: 3.25rem;
+	/* font-size: 3.25rem; */
+	font-size: 3.5rem;
 }
 
 h2 {
-	font-size: 2rem;
+	/* font-size: 2rem; */
+	font-size: 2.25rem;
 }
 
 h3 {
-	font-size: 1rem;
+	/* font-size: 1rem; */
+	font-size: 1.25rem;
 }
 
 p {
-	font-size: 1rem;
-	padding-top: 1rem;
+	/* font-size: 1rem;
+	padding-top: 1rem; */
+	font-size: 1.25rem;
+	padding-top: 1.25rem;
 }
 
 /* Projects */
 .project {
+	width: 80em;
+	height: 35em;
 	position: static;
 }
 
+/* figure out how to contain without pushing everything else */
 .project img {
 	max-height: 100%;
-	width: auto;
+	max-width: 100%;
+	/* width: auto; */
+	object-fit: cover;
+}
+
+/* Additions */
+.project.grid-2.carousel .p6.carousel-container {
+	max-width: 100%;
+	overflow: hidden;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.project.grid-2.carousel .p6.carousel-container img {
+	max-width: 100%;
+	height: auto;
 }
 
 .project video {
@@ -217,6 +250,11 @@ p {
 }
 
 .p5 {
+	grid-area: 1 / 1 / 5 / 9;
+}
+
+/* added this one last */
+.p6 {
 	grid-area: 1 / 1 / 5 / 9;
 }
 
@@ -319,14 +357,16 @@ footer {
 
 /* Socials ;p */
 .socials {
+	margin: 0;
+	padding: 0.5em;
+	right: 1%;
+	bottom: 50%;
 	display: flex;
 	flex-direction: column;
 	position: fixed;
-	right: 1%;
-	bottom: 50%;
 	text-align: right;
-	margin: 0;
-	padding: 0;
+	background-color: #f8f8f8;
+	/* 	filter: blur(1rem); */
 }
 
 .socicon {
@@ -365,7 +405,141 @@ footer {
 	color: #f8f8f8;
 }
 
+.carousel-container {
+	/* flex: 1;
+	order: 1; */
+	position: relative;
+}
+
+.carousel-container > * {
+	/* all children of .carousel-container */
+}
+
+.left-area {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 50%;
+	height: 100%;
+	/* background-color: orange; */
+	cursor: pointer;
+	opacity: 0.2;
+}
+
+.right-area {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 50%;
+	height: 100%;
+	/* background-color: cornflowerblue; */
+	cursor: pointer;
+	opacity: 0.2;
+}
+
+/* change to the other arrows */
+.left-area:hover {
+	cursor: w-resize;
+}
+
+.right-area:hover {
+	cursor: e-resize;
+}
+
 /* Media queries */
+@media (min-width: 3072px) {
+	.wrapper {
+		margin: 0 auto;
+		/* margin: 1rem; */
+		padding: 4rem;
+		box-sizing: border-box;
+		max-width: 100%;
+		display: flex;
+		justify-content: center;
+		align-content: center;
+	}
+
+	.grid {
+		/* Change the second column to auto width */
+		grid-template-columns: 1fr auto;
+	}
+
+	.grid > :nth-child(2) {
+		margin: 0 auto;
+		box-sizing: border-box;
+		max-width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	#header {
+		margin: 0;
+		padding-right: 3rem;
+		width: 30%;
+	}
+
+	main.container {
+		width: 70%;
+	}
+
+	h1 {
+		font-size: 4.25rem;
+	}
+
+	h2 {
+		font-size: 3rem;
+	}
+
+	h3 {
+		font-size: 2rem;
+	}
+
+	p {
+		font-size: 2rem;
+		padding-top: 2rem;
+	}
+
+	.footer-spacer {
+		background-color: #1b1b1b;
+		height: 1px;
+		flex-grow: 1;
+		margin-top: 3.5rem;
+		margin-bottom: 3.5rem;
+		align-self: baseline;
+		display: block;
+	}
+
+	.socials a,
+	#email {
+		font-size: 2rem;
+	}
+}
+
+/* after adjusting the larger formats, the mobile needs some review. check the carousel height and width settings. */
+@media only screen and (max-width: 1350px) {
+	:root {
+		--spacing-unit: 0.75rem;
+	}
+
+	h1 {
+		font-size: 3.25rem;
+	}
+
+	h2 {
+		font-size: 2rem;
+	}
+
+	h3 {
+		font-size: 1rem;
+	}
+
+	p {
+		font-size: 1rem;
+		padding-top: 1rem;
+	}
+}
+
 @media only screen and (max-width: 900px) {
 	#navTab {
 		display: none;
@@ -449,10 +623,6 @@ footer {
 	}
 
 	/* Make the video container take up the full width */
-	.carousel-container {
-		flex: 1;
-		order: 1;
-	}
 
 	.project-desc {
 		order: 2;
