@@ -191,16 +191,17 @@ p {
 
 /* Projects */
 .project {
-	width: 80em;
-	height: 35em;
+	width: fit-content;
 	position: static;
 }
 
 /* figure out how to contain without pushing everything else */
 .project img {
+	width: fit-content;
+	height: fit-content;
 	max-height: 100%;
 	max-width: 100%;
-	/* width: auto; */
+
 	object-fit: cover;
 }
 
@@ -409,6 +410,9 @@ footer {
 	/* flex: 1;
 	order: 1; */
 	position: relative;
+	height: 35em;
+	display: flex;
+	justify-content: center;
 }
 
 .carousel-container > * {
