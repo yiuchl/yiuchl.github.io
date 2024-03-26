@@ -320,16 +320,17 @@ footer {
 
 /* https://youtu.be/Ob7vObnFUJc?si=H5uDjLf0NspdRxuy */
 .scroll-up {
+	margin: 0;
 	position: fixed;
-	/* right: 0.5%; */
+	right: 0.5%;
 	bottom: 1.29%;
-	cursor: pointer;
 	z-index: 40;
+	cursor: pointer;
 }
 
 #scroll-up-arrow {
 	font-size: 3rem;
-	padding-right: 3rem;
+	padding-right: 1rem;
 }
 
 /* Rotations */
@@ -366,8 +367,16 @@ footer {
 	flex-direction: column;
 	position: fixed;
 	text-align: right;
-	background-color: #f8f8f8;
-	/* 	filter: blur(1rem); */
+	/* background-color: #f8f8f8; */
+	background-color: rgba(248, 248, 248, 0.7);
+	backdrop-filter: blur(18px);
+}
+
+/* Remove blur effect from text and buttons */
+.socials a,
+.socials input,
+.socials button {
+	backdrop-filter: none;
 }
 
 .socicon {
