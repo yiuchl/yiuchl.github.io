@@ -8,8 +8,9 @@ const randomInt = (max) => Math.floor(Math.random() * max);
 const randomFromArray = (array) => array[randomInt(array.length)];
 
 // *>⋆&@#✧.%$-_:/✿;?!
+// hardatwork
 const scrambleText = (text) => {
-	const chars = "atwork".split("");
+	const chars = "here".split("");
 	return text
 		.split("")
 		.map((x) => (randomInt(3) > 1 ? randomFromArray(chars) : x))
