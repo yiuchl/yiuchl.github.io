@@ -8,7 +8,7 @@ const randomInt = (max) => Math.floor(Math.random() * max);
 const randomFromArray = (array) => array[randomInt(array.length)];
 
 // *>⋆&@#✧.%$-_:/✿;?!
-// hardatwork
+// hardatwork; stillhere
 const scrambleText = (text) => {
 	const chars = "".split("");
 	return text
