@@ -260,12 +260,12 @@ p {
 }
 
 /* for when things need to scale down a bit */
-.scale-down {
+/* .scale-down {
 	object-fit: scale-down;
 	max-width: 100%;
 	align-content: center;
 	justify-content: space-around;
-}
+} */
 
 /* Footer for the main page */
 footer {
