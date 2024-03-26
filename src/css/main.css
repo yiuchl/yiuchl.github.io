@@ -486,8 +486,14 @@ footer {
 	cursor: e-resize;
 }
 
-.then_media{
-	object-fit: cover; height: 100%;
+.then_media {
+	object-fit: cover;
+	height: 100%;
+}
+
+.window_media {
+	max-width: 100%;
+	height: auto;
 }
 
 /* Media queries */
@@ -658,15 +664,13 @@ footer {
 	.project-desc p {
 		font-size: 16px;
 		padding-top: 0.5rem;
-		/* color: #ff0080; */
 	}
 
 	/* Change flex-direction to stack items horizontally */
 	.project {
 		flex-direction: row;
+		justify-content: center;
 	}
-
-	/* Make the video container take up the full width */
 
 	.project-desc {
 		order: 2;
@@ -685,8 +689,10 @@ footer {
 	}
 
 	.carousel-container {
-		height: auto;
-		padding: 1em;
+		/* height: auto;
+		padding: 1em; */
+		height: 40vh;
+		margin: 1em;
 	}
 
 	.span-spacer {
@@ -698,12 +704,10 @@ footer {
 		height: auto;
 	}
 
-	/* Target videos */
 	video {
 		max-width: 100%;
 		height: auto;
 	}
-
 }
 
 @media only screen and (max-width: 430px) {
