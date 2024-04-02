@@ -65,6 +65,7 @@ scrollUp.addEventListener("click", () => {
 });
 
 // Change text on click
+// endless, rotation, who are you
 const changeText = document.getElementById("footerUpdate");
 const textOptions = [
 	"excited to get to know you",
@@ -79,6 +80,28 @@ const textOptions = [
 	"always made with love",
 	"best wishes",
 	"𓆝⋆｡˚𓆟 𓆞⋆｡˚•𓆝 ⋆⭒𓆟",
+	"let's talk music, food, and artist spaces",
+	"let's exchange playlists",
+	"exploring galleries, museums, and fairs",
+	"last seen reading WEBTOONS",
+	"last seen watching The Bear",
+	"last seen folding fortune tellers",
+	"last seen eating ramen",
+	"last seen collecting stickers",
+	"are you up for matcha?",
+	"wanna grab a cup of coffee?",
+	"are you good to go on a stationery tour?",
+	"looking for typefaces",
+	"can spend all day browsing books",
+	"what's your daylist?",
+	"doing yoga",
+	"at an aerial class",
+	"learning reiki",
+	"baking cookies",
+	"sampling fragrances",
+	"brewing tea",
+	"last seen updating this status",
+	"testing pens",
 ];
 
 function getRandomText() {
