@@ -21,6 +21,7 @@ body {
 	overflow-x: hidden;
 	color: #1b1b1b;
 	font-family: "Redaction Regular", Verdana, Tahoma, sans-serif;
+	display: block;
 }
 
 main {
@@ -106,6 +107,7 @@ button {
 	cursor: pointer;
 }
 
+/* my laptop */
 #textSpan:hover {
 	font-size: 1rem;
 }
@@ -217,8 +219,9 @@ p {
 
 /* Projects */
 .project {
-	width: fit-content;
 	position: static;
+	padding-top: 2.45rem;
+	padding-bottom: 2.45rem;
 }
 
 /* figure out how to contain without pushing everything else */
@@ -269,7 +272,7 @@ p {
 }
 
 .p3 {
-	grid-area: 1 / 1 / 2 / 9;
+	grid-area: 1 / 1 / 3 / 9;
 }
 
 .p4 {
@@ -497,7 +500,11 @@ footer {
 }
 
 /* Media queries */
-@media (min-width: 3072px) {
+@media (min-width: 3445px) {
+	body {
+		display: flex;
+	}
+
 	.wrapper {
 		margin: 0 auto;
 		/* margin: 1rem; */
@@ -507,6 +514,7 @@ footer {
 		display: flex;
 		justify-content: center;
 		align-content: center;
+		display: flex;
 	}
 
 	.grid {
@@ -525,12 +533,33 @@ footer {
 
 	#header {
 		margin: 0;
-		padding-right: 3rem;
+		margin-top: 3rem;
+		margin-right: 4vw;
+		/* padding-right: 3rem; */
+		/* width: 40%; */
 		width: 30%;
+
+		flex-shrink: 0;
+
+		position: fixed;
+		/* position: fixed; this messes it up but i do want it to appear as you scroll */
+		top: 0;
+		left: 3rem;
+
+		z-index: 30;
+	}
+
+	.span-spacer {
+		display: none;
 	}
 
 	main.container {
-		width: 70%;
+		width: 60%;
+		flex-grow: 1;
+	}
+
+	.container-main {
+		margin-left: 35%;
 	}
 
 	h1 {
@@ -564,6 +593,79 @@ footer {
 	#email {
 		font-size: 2rem;
 	}
+
+	.carousel-container {
+		height: 48vh;
+	}
+
+	#textSpan:hover {
+		font-size: 1.75rem;
+	}
+}
+
+@media only screen and (max-width: 3456px) {
+	h1 {
+		font-size: 4rem;
+	}
+
+	h2 {
+		font-size: 2.75rem;
+	}
+
+	h3 {
+		font-size: 1.75rem;
+	}
+
+	p {
+		font-size: 1.75rem;
+		padding-top: 1.75rem;
+	}
+
+	.socials a,
+	#email {
+		font-size: 1.75rem;
+	}
+
+	.carousel-container {
+		height: 40vh;
+	}
+
+	.span-spacer {
+		height: 55vh;
+	}
+}
+
+/* my laptop size; 3072px;  */
+@media only screen and (max-width: 3072px) {
+	h1 {
+		font-size: 3.5rem;
+	}
+
+	h2 {
+		font-size: 2.25rem;
+	}
+
+	h3 {
+		font-size: 1.25rem;
+	}
+
+	p {
+		font-size: 1.25rem;
+		padding-top: 1.25rem;
+	}
+
+	.socials a,
+	#email {
+		font-size: 1.25rem;
+	}
+
+	.carousel-container {
+		height: 35em;
+	}
+
+	.span-spacer {
+		height: 58vh;
+	}
 }
 
 /* after adjusting the larger formats, the mobile needs some review. check the carousel height and width settings. */
@@ -587,6 +689,24 @@ footer {
 	p {
 		font-size: 1rem;
 		padding-top: 1rem;
+	}
+
+	#header {
+		position: static;
+		width: 100%;
+	}
+
+	body {
+		display: block;
+	}
+
+	#nature-wall {
+		object-fit: cover;
+		width: 95%;
+	}
+
+	#textSpan:hover {
+		font-size: 1rem;
 	}
 }
 
