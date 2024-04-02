@@ -833,10 +833,8 @@ footer {
 	}
 
 	.carousel-container {
-		/* height: auto;
-		padding: 1em; */
-		/* height: 40vh; */
-		height: auto;
+		/* padding: 1em; */
+		height: 40vh;
 		margin: 1em;
 	}
 
