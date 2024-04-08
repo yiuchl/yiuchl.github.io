@@ -29,6 +29,40 @@ element.addEventListener("mouseout", () => {
 	element.innerText = originalText;
 });
 
+// text scramble for the larger screen
+let scrambleInt;
+
+const scrambleEle = document.querySelector(".scramble-2");
+const prescrambleText = scrambleEle.innerText;
+
+const scrambleRandomInt = (max) => Math.floor(Math.random() * max);
+const scrambleRandomFromArray = (array) =>
+	array[scrambleRandomInt(array.length)];
+
+// *>⋆&@#✧.%$-_:/✿;?!
+// hardatwork; stillhere
+const postScrambleText = (text) => {
+	const scrambleChars = "hardatwork".split("");
+	return text
+		.split("")
+		.map((x) =>
+			scrambleRandomInt(3) > 1 ? scrambleRandomFromArray(scrambleChars) : x
+		)
+		.join("");
+};
+
+scrambleEle.addEventListener("mouseover", () => {
+	scrambleInt = setInterval(
+		() => (scrambleEle.innerText = postScrambleText(prescrambleText)),
+		100
+	);
+});
+
+scrambleEle.addEventListener("mouseout", () => {
+	clearInterval(scrambleInt);
+	scrambleEle.innerText = prescrambleText;
+});
+
 // heart
 // Get the span element by its ID
 const textSpan = document.getElementById("textSpan");

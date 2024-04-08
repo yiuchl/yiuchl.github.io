@@ -499,8 +499,12 @@ footer {
 	height: auto;
 }
 
+.scramble-2 {
+	display: none;
+}
+
 /* Media queries */
-@media (min-width: 3445px) {
+@media (min-width: 3400px) {
 	body {
 		display: flex;
 	}
@@ -542,11 +546,14 @@ footer {
 		flex-shrink: 0;
 
 		position: fixed;
-		/* position: fixed; this messes it up but i do want it to appear as you scroll */
 		top: 0;
 		left: 3rem;
 
 		z-index: 30;
+	}
+
+	#navName-desc {
+		padding-right: 2.25rem;
 	}
 
 	.span-spacer {
@@ -559,7 +566,7 @@ footer {
 	}
 
 	.container-main {
-		margin-left: 35%;
+		margin-left: 33%;
 	}
 
 	h1 {
@@ -590,20 +597,42 @@ footer {
 	}
 
 	.socials a,
+	.socials input,
+	.socials button,
 	#email {
 		font-size: 2rem;
 	}
 
+	.socials {
+		left: 1%;
+		text-align: left;
+		background-color: transparent;
+		backdrop-filter: blur(0px);
+	}
+
 	.carousel-container {
-		height: 48vh;
+		height: 30vh;
 	}
 
 	#textSpan:hover {
 		font-size: 1.75rem;
 	}
+
+	.scramble {
+		display: none;
+	}
+
+	.scramble-2 {
+		display: inline-block;
+		position: absolute;
+		bottom: 0;
+		left: 3rem;
+		padding: 2.5rem;
+		padding-bottom: 4.25rem;
+	}
 }
 
-@media only screen and (max-width: 3456px) {
+@media only screen and (max-width: 3400px) {
 	h1 {
 		font-size: 4rem;
 	}
@@ -624,11 +653,17 @@ footer {
 	.socials a,
 	#email {
 		font-size: 1.75rem;
+		left: 1%;
+		text-align: left;
 	}
-
-	.carousel-container {
-		height: 40vh;
-	}
+	
+	/* 
+	.socials {
+		left: 1%;
+		text-align: left;
+		background-color: transparent;
+		backdrop-filter: blur(0px);
+	} */
 
 	.span-spacer {
 		height: 55vh;
