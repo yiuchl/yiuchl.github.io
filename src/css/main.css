@@ -692,6 +692,7 @@ footer {
 	.socials a,
 	#email {
 		font-size: 1.25rem;
+		text-align: right;
 	}
 
 	.carousel-container {

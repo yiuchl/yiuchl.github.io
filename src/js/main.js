@@ -152,9 +152,7 @@ changeText.addEventListener("click", changeRandomText);
 // Initialize draggable functionality for div elements
 $(function () {
 	$(".draggable-div").draggable({
-		// Restrict dragging within the document
 		containment: "document",
-		// Change cursor to indicate draggable eleent
 		cursor: "move",
 	});
 });
