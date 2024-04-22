@@ -871,21 +871,27 @@ footer {
 
 	.carousel-container {
 		padding: 0.75em;
-		height: 40vh;
-		margin: 1em;
+		height: 100%;
 	}
 
 	.span-spacer {
-		/* height: 45vh; */
 		height: 40vh;
 	}
 
 	.left-area {
-		height: 100%;
+		display: none;
 	}
 
 	.right-area {
-		height: 100%;
+		display: none;
+	}
+
+	#footerUpdate {
+		display: none;
+	}
+
+	.project-desc {
+		padding: 0.75rem;
 	}
 
 	img {
