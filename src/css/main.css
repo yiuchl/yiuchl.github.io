@@ -17,6 +17,8 @@ html {
 }
 
 body {
+	margin: 0;
+	padding: 0;
 	background-color: #f8f8f8;
 	overflow-x: hidden;
 	color: #1b1b1b;
@@ -26,7 +28,7 @@ body {
 
 main {
 	position: relative;
-	min-height: 100vh;
+	min-height: 100%;
 }
 
 a:hover {
@@ -112,23 +114,6 @@ button {
 	font-size: 1rem;
 }
 
-/* Content */
-.wrapper {
-	margin: 0;
-	padding: 2rem;
-	padding-left: 3rem;
-	padding-right: 3rem;
-	position: relative;
-}
-
-.container {
-	/* position: relative; */
-	display: contents;
-	height: 100vh;
-	z-index: 0;
-	flex-wrap: wrap;
-}
-
 /* Div Grid */
 /* If four <grid-line> values are specified, 
     grid-row-start is set to the first value, 
@@ -145,7 +130,6 @@ button {
 /* Main Grid */
 .grid-2 {
 	display: grid;
-
 	grid-row: 1;
 	grid-template-columns: repeat(12, 1fr);
 	grid-column-gap: var(--spacing-unit);
@@ -217,23 +201,44 @@ p {
 	padding-top: 1.25rem;
 }
 
-/* Projects */
-.project {
-	position: static;
-	padding-top: 2.45rem;
-	padding-bottom: 2.45rem;
+/* Content */
+/* .wrapper {
+	margin: 0;
+	padding: 2rem;
+	padding-left: 3rem;
+	padding-right: 3rem;
+	position: relative;
+} */
+
+#top {
+	margin: 0;
+	padding-top: 2rem;
+	padding-bottom: 0;
+	padding-left: 3rem;
+	padding-right: 3rem;
 }
 
-/* figure out how to contain without pushing everything else */
-.project img {
-	width: fit-content;
-	height: fit-content;
+.container {
+	display: contents;
+	height: 100vh;
+	z-index: 0;
+	flex-wrap: wrap;
+}
+
+/* Projects */
+.carousel {
+	position: static;
+	margin: 0;
+	padding: 3rem 3rem 3rem 3rem;
+}
+
+.carousel img {
 	max-height: 100%;
 	max-width: 100%;
 	object-fit: cover;
 }
 
-.project video {
+.carousel video {
 	max-height: 100%;
 	width: auto;
 }
@@ -268,7 +273,6 @@ p {
 	grid-area: 1 / 1 / 5 / 9;
 }
 
-/* added this one last */
 .p6 {
 	grid-area: 1 / 1 / 5 / 9;
 }
@@ -291,7 +295,7 @@ footer {
 	display: grid;
 	z-index: 30;
 	align-items: start;
-	padding-bottom: 0.5rem;
+	padding-bottom: 2.5rem;
 }
 
 #footerUpdate {
@@ -304,7 +308,7 @@ footer {
 	color: #ff0080;
 }
 
-.footer-spacer {
+/* .footer-spacer {
 	background-color: #1b1b1b;
 	height: 1px;
 	flex-grow: 1;
@@ -312,15 +316,22 @@ footer {
 	margin-bottom: 1.5rem;
 	align-self: baseline;
 	display: block;
+} */
+
+hr {
+	margin: 2.5% 0% 2.5% 0%;
+	border: none;
+	height: 1px;
+	background-color: #1b1b1b;
 }
 
-.footer-spacer-darkMode {
+/* .footer-spacer-darkMode {
 	background-color: #f8f8f8;
-}
+} */
 
 /* Interesting Hover Effects */
 .scramble {
-	width: 200px;
+	padding-left: 3rem;
 }
 
 .scramble:hover {
@@ -469,16 +480,6 @@ footer {
 	cursor: e-resize;
 }
 
-.then_media {
-	object-fit: cover;
-	height: 100%;
-}
-
-.window_media {
-	max-width: 100%;
-	height: auto;
-}
-
 .scramble-2 {
 	display: none;
 }
@@ -563,7 +564,7 @@ footer {
 		padding-top: 2rem;
 	}
 
-	.footer-spacer {
+	/* .footer-spacer {
 		background-color: #1b1b1b;
 		height: 1px;
 		flex-grow: 1;
@@ -571,7 +572,7 @@ footer {
 		margin-bottom: 3.5rem;
 		align-self: baseline;
 		display: block;
-	}
+	} */
 
 	.socials a,
 	.socials input,
@@ -729,7 +730,7 @@ footer {
 		padding: 0;
 	}
 
-	.project {
+	.carousel {
 		padding: 3rem;
 	}
 
@@ -836,7 +837,7 @@ footer {
 	}
 
 	/* Define a flexbox layout for the container */
-	.project {
+	.carousel {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
@@ -903,7 +904,7 @@ footer {
 		display: none;
 	}
 
-	.project img {
+	.carousel img {
 		max-height: 25vh;
 	}
 
