@@ -913,11 +913,15 @@ footer {
 		padding: 1rem;
 	}
 
+	.footer {
+		padding: 0;
+	}
+
 	.scramble {
 		padding-left: 1.8rem;
 		padding-bottom: 1rem;
 		/* display none if you have socials at bottom */
-		display: none;
+		/* display: none; */
 	}
 
 	#nature-wall {
@@ -933,10 +937,6 @@ footer {
 		bottom: auto;
 		position: absolute;
 		align-items: flex-start;
-	}
-
-	.footer {
-		padding-bottom: 0;
 	} */
 
 	img {
