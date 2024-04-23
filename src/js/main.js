@@ -210,9 +210,10 @@ const modeSwitch = () => {
 	}
 };
 
-window.addEventListener("resize", function () {
-	document.documentElement.style.setProperty(
-		"--vh",
-		`${window.innerHeight * 0.01}px`
-	);
-});
+// added this to fix double scrollbar
+// window.addEventListener("resize", function () {
+// 	document.documentElement.style.setProperty(
+// 		"--vh",
+// 		`${window.innerHeight * 0.01}px`
+// 	);
+// });
