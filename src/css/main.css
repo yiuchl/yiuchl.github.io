@@ -740,14 +740,14 @@ hr {
 
 	.socials {
 		position: fixed;
-		background-color: transparent;
-		backdrop-filter: blur(0px);
+		background-color: rgba(248, 248, 248, 0.5);
+		backdrop-filter: blur(5px);
 	}
 
 	.socials a,
 	#email {
 		position: relative;
-		font-size: 1.25rem;
+		font-size: 1rem;
 		padding-right: 0;
 	}
 
