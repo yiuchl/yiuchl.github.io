@@ -921,8 +921,10 @@ hr {
 	.scramble {
 		padding-left: 1.8rem;
 		padding-bottom: 2rem;
-		/* display none if you have socials at bottom */
-		/* display: none; */
+	}
+
+	.grid-3 {
+		display: flex;
 	}
 
 	/* socials in footer? make the footer padding-bottom 0 if you put the socials in the footer instead of fixed */
