@@ -100,7 +100,7 @@ scrollUp.addEventListener("click", () => {
 
 // Change text on click
 // endless, rotation, who are you
-const changeText = document.getElementById("footerUpdate");
+const changeText = document.getElementById("footerUpdate-1");
 const textOptions = [
 	"excited to get to know you",
 	"would love to chat",

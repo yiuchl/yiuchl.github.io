@@ -1,10 +1,27 @@
 :root {
 	--font-family: "Redaction Regular", Verdana, Tahoma, sans-serif;
-	/* --spacing-unit: 0.75rem; */
 	--spacing-unit: 1.25rem;
 	--large: 1rem;
 	--normal: 0.5rem;
 	--small: 0.33rem;
+}
+
+/* Scrollbar */
+*::-webkit-scrollbar {
+	width: 8px;
+	background: transparent;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+	background: transparent;
+	width: 5px;
+}
+
+/* Selection */
+*::selection {
+	color: orangered;
+	background: transparent;
 }
 
 html {
@@ -44,24 +61,6 @@ i:hover {
 
 button {
 	cursor: pointer;
-}
-
-/* Scrollbar */
-*::-webkit-scrollbar {
-	width: 8px;
-	background: transparent;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-	background: transparent;
-	width: 5px;
-}
-
-/* Selection */
-*::selection {
-	color: orangered;
-	background: transparent;
 }
 
 /* Highlight */
@@ -298,13 +297,13 @@ footer {
 	padding-bottom: 2.5rem;
 }
 
-#footerUpdate {
+#footerUpdate-1 {
 	grid-column: 3 / 4;
 	cursor: pointer;
 	padding-left: 1.25rem;
 }
 
-#footerUpdate:hover {
+#footerUpdate-1:hover {
 	color: #ff0080;
 }
 
@@ -323,6 +322,7 @@ hr {
 	border: none;
 	height: 1px;
 	background-color: #1b1b1b;
+	width: 100%;
 }
 
 /* .footer-spacer-darkMode {
@@ -343,6 +343,7 @@ hr {
 /* https://youtu.be/Ob7vObnFUJc?si=H5uDjLf0NspdRxuy */
 .scroll-up {
 	margin: 0;
+	padding: 0;
 	position: fixed;
 	right: 0.5%;
 	bottom: 1.29%;
@@ -485,14 +486,16 @@ hr {
 }
 
 /* Media queries */
-@media (min-width: 3400px) {
+/* 2500 */
+@media (min-width: 2000px) {
 	body {
 		display: flex;
 	}
 
 	.wrapper {
 		margin: 0 auto;
-		padding: 4rem;
+		/* padding: 4rem; this is perfect with scramble-2 bottom 6.5 */
+		padding: 7rem;
 		box-sizing: border-box;
 		max-width: 100%;
 		display: flex;
@@ -548,7 +551,7 @@ hr {
 	}
 
 	h1 {
-		font-size: 4.25rem;
+		font-size: 4.75rem;
 	}
 
 	h2 {
@@ -582,7 +585,7 @@ hr {
 	}
 
 	.socials {
-		left: 1%;
+		left: 3.25%;
 		text-align: left;
 		background-color: transparent;
 		backdrop-filter: blur(0px);
@@ -593,60 +596,52 @@ hr {
 	}
 
 	#textSpan:hover {
-		font-size: 1.75rem;
+		font-size: 1.5rem;
 	}
 
 	.scramble {
 		display: none;
 	}
 
-	.scramble-2 {
+	/* .scramble-2 {
 		display: block;
-		position: absolute;
-		top: 190.25vh;
-		left: 3rem;
-	}
+		position: fixed;
+		left: 6rem;
+		bottom: 7rem;
+	} */
+
 	.scramble-2:hover {
 		color: #ff0080;
 	}
-}
 
-@media only screen and (max-width: 3400px) {
-	h1 {
-		font-size: 4rem;
+	#footerUpdate-1 {
+		display: none;
 	}
 
-	h2 {
-		font-size: 2.75rem;
+	#footerUpdate-2 {
+		font-family: "Redaction Italic", Verdana, Tahoma, sans-serif;
+		display: block;
+		/* position: absolute; */
+		position: fixed;
+		/* top: 190.25vh; */
+		/* left: 3rem; */
+		/* top: 212.65vh; */
+		left: 3.75%;
+
+		/* bottom: 6.5rem; the other one was 9.5*/
+		bottom: 7rem;
 	}
 
-	h3 {
-		font-size: 1.75rem;
+	footer {
+		display: none;
 	}
 
-	p {
-		font-size: 1.75rem;
-		padding-top: 1.75rem;
-	}
-
-	.socials a,
-	#email {
-		font-size: 1.75rem;
-		left: 1%;
-		text-align: left;
-	}
-
-	a:hover {
-		color: #ff0080;
-	}
-
-	.span-spacer {
-		height: 55vh;
+	#scroll-up-arrow {
+		font-size: 5rem;
 	}
 }
 
-/* my laptop size; 3072px;  */
-@media only screen and (max-width: 3072px) {
+@media only screen and (max-width: 1800px) {
 	h1 {
 		font-size: 3.5rem;
 	}
@@ -666,8 +661,17 @@ hr {
 
 	.socials a,
 	#email {
+		position: relative;
 		font-size: 1.25rem;
-		text-align: right;
+	}
+
+	.socials {
+		/* position: fixed; */
+		position: absolute;
+		/* left: 3.25%;
+		text-align: left; */
+		background-color: transparent;
+		backdrop-filter: blur(0px);
 	}
 
 	.carousel-container {
@@ -679,8 +683,7 @@ hr {
 	}
 }
 
-/* after adjusting the larger formats, the mobile needs some review. check the carousel height and width settings. */
-@media only screen and (max-width: 1350px) {
+@media only screen and (max-width: 1500px) {
 	:root {
 		--spacing-unit: 0.75rem;
 	}
@@ -702,11 +705,6 @@ hr {
 		padding-top: 1rem;
 	}
 
-	.socials a,
-	#email {
-		font-size: 1rem;
-	}
-
 	#header {
 		position: static;
 		width: 100%;
@@ -714,11 +712,6 @@ hr {
 
 	body {
 		display: block;
-	}
-
-	#nature-wall {
-		object-fit: cover;
-		width: 95%;
 	}
 
 	#textSpan:hover {
@@ -745,7 +738,16 @@ hr {
 		padding-bottom: 3rem;
 	}
 
-	.socials a {
+	.socials {
+		position: fixed;
+		background-color: transparent;
+		backdrop-filter: blur(0px);
+	}
+
+	.socials a,
+	#email {
+		position: relative;
+		font-size: 1.25rem;
 		padding-right: 0;
 	}
 
@@ -844,10 +846,6 @@ hr {
 		padding: 1rem;
 	}
 
-	.scale-down {
-		padding: 1rem;
-	}
-
 	/* Style the project description */
 	.project-desc h2 {
 		font-size: 1.5rem;
@@ -900,7 +898,7 @@ hr {
 		display: none;
 	}
 
-	#footerUpdate {
+	#footerUpdate-1 {
 		display: none;
 	}
 
@@ -927,10 +925,6 @@ hr {
 		/* display: none; */
 	}
 
-	#nature-wall {
-		width: auto;
-	}
-
 	/* socials in footer? make the footer padding-bottom 0 if you put the socials in the footer instead of fixed */
 	/* .socials {
 		padding-left: 1.8rem;
@@ -952,11 +946,5 @@ hr {
 		max-width: 100%;
 		height: auto;
 		object-fit: contain;
-	}
-}
-
-@media only screen and (max-width: 430px) {
-	.scale-down {
-		padding: 0;
 	}
 }
