@@ -392,8 +392,8 @@ footer {
 	flex-direction: column;
 	position: fixed;
 	text-align: right;
-	background-color: rgba(248, 248, 248, 0.7);
-	backdrop-filter: blur(18px);
+	background-color: rgba(248, 248, 248, 0.25);
+	backdrop-filter: blur(5px);
 	z-index: 60;
 }
 
@@ -831,7 +831,7 @@ footer {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
-		padding: 0;
+		padding: 1rem;
 	}
 
 	.scale-down {
@@ -855,6 +855,8 @@ footer {
 
 	.project-desc {
 		order: 2;
+		padding: 0.8rem;
+		text-align: left;
 	}
 
 	#and-tiny {
@@ -890,12 +892,40 @@ footer {
 		display: none;
 	}
 
-	.project-desc {
-		padding: 0.75rem;
-	}
-
 	.project img {
 		max-height: 25vh;
+	}
+
+	.wrapper {
+		padding: 0;
+	}
+
+	#top {
+		padding: 1rem;
+	}
+
+	.scramble {
+		padding-left: 1.8rem;
+		padding-bottom: 1rem;
+	}
+
+	#nature-wall {
+		width: auto;
+	}
+
+	/* socials in footer? make the footer padding-bottom 0 if you put the socials in the footer instead of fixed */
+	.socials {
+		padding-left: 1.8rem;
+		padding-top: 0;
+		padding-bottom: 1rem;
+		right: auto;
+		bottom: auto;
+		position: absolute;
+		align-items: flex-start;
+	}
+
+	.footer {
+		padding-bottom: 0;
 	}
 
 	img {
