@@ -300,7 +300,7 @@ footer {
 #footerUpdate-1 {
 	grid-column: 3 / 4;
 	cursor: pointer;
-	padding-left: 1.25rem;
+	/* padding-left: 1.25rem; */
 }
 
 #footerUpdate-1:hover {
@@ -428,10 +428,6 @@ hr {
 .darkMode {
 	background-color: #1b1b1b;
 	color: #f8f8f8;
-}
-
-.hidden {
-	display: none;
 }
 
 .light-text {
