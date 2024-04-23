@@ -925,7 +925,7 @@ footer {
 	}
 
 	/* socials in footer? make the footer padding-bottom 0 if you put the socials in the footer instead of fixed */
-	.socials {
+	/* .socials {
 		padding-left: 1.8rem;
 		padding-top: 0;
 		padding-bottom: 1rem;
@@ -937,7 +937,7 @@ footer {
 
 	.footer {
 		padding-bottom: 0;
-	}
+	} */
 
 	img {
 		max-width: 100%;
