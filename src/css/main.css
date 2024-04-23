@@ -118,7 +118,7 @@ button {
 	padding: 2rem;
 	padding-left: 3rem;
 	padding-right: 3rem;
-	position: relative;
+	/* position: relative; */
 }
 
 .container {
@@ -233,21 +233,6 @@ p {
 	object-fit: cover;
 }
 
-/* Additions */
-/* .project.grid-2.carousel .p6.carousel-container {
-	max-width: 100%;
-	overflow: hidden;
-
-	display: flex;
-	justify-content: center;
-	align-items: baseline;
-} */
-
-/* .project.grid-2.carousel .p6.carousel-container img {
-	max-width: 100%;
-	height: auto;
-} */
-
 .project video {
 	max-height: 100%;
 	width: auto;
@@ -312,6 +297,7 @@ footer {
 #footerUpdate {
 	grid-column: 3 / 4;
 	cursor: pointer;
+	padding-left: 1.25rem;
 }
 
 #footerUpdate:hover {
@@ -460,7 +446,6 @@ footer {
 	left: 0;
 	width: 50%;
 	height: 100%;
-	/* background-color: orange; */
 	cursor: pointer;
 	opacity: 0.2;
 }
@@ -471,7 +456,6 @@ footer {
 	right: 0;
 	width: 50%;
 	height: 100%;
-	/* background-color: cornflowerblue; */
 	cursor: pointer;
 	opacity: 0.2;
 }
@@ -507,7 +491,6 @@ footer {
 
 	.wrapper {
 		margin: 0 auto;
-		/* margin: 1rem; */
 		padding: 4rem;
 		box-sizing: border-box;
 		max-width: 100%;
@@ -535,8 +518,6 @@ footer {
 		margin: 0;
 		margin-top: 3rem;
 		margin-right: 4vw;
-		/* padding-right: 3rem; */
-		/* width: 40%; */
 		width: 30%;
 
 		flex-shrink: 0;
@@ -619,12 +600,13 @@ footer {
 	}
 
 	.scramble-2 {
-		display: inline-block;
+		display: block;
 		position: absolute;
-		bottom: 0;
+		top: 190.25vh;
 		left: 3rem;
-		padding: 2.5rem;
-		padding-bottom: 4.25rem;
+	}
+	.scramble-2:hover {
+		color: #ff0080;
 	}
 }
 
@@ -652,14 +634,6 @@ footer {
 		left: 1%;
 		text-align: left;
 	}
-
-	/* 
-	.socials {
-		left: 1%;
-		text-align: left;
-		background-color: transparent;
-		backdrop-filter: blur(0px);
-	} */
 
 	a:hover {
 		color: #ff0080;
@@ -749,6 +723,41 @@ footer {
 	#textSpan:hover {
 		font-size: 1rem;
 	}
+
+	/* full hr */
+	.wrapper {
+		padding: 0;
+	}
+
+	.project {
+		padding: 3rem;
+	}
+
+	#top {
+		padding: 3rem;
+		padding-right: 0;
+	}
+
+	.footer {
+		padding-left: 3rem;
+		padding-right: 3rem;
+		padding-bottom: 3rem;
+	}
+
+	.socials a {
+		padding-right: 0;
+	}
+
+	#linkedInLink {
+		padding: 10px;
+		padding-bottom: 0;
+		padding-right: 0;
+	}
+
+	.email-popup-Link {
+		padding: 10px;
+		padding-top: 0;
+	}
 }
 
 @media only screen and (max-width: 1250px) {
@@ -761,7 +770,7 @@ footer {
 	}
 }
 
-@media only screen and (max-width: 1100px) {
+@media only screen and (max-width: 1080px) {
 	.carousel-container {
 		height: 25em;
 	}
@@ -769,21 +778,21 @@ footer {
 	.span-spacer {
 		height: 40vh;
 	}
-}
 
-@media only screen and (max-width: 900px) {
 	#navTab {
 		display: none;
 	}
-}
 
-@media only screen and (max-width: 850px) {
+	#top {
+		padding: 3rem;
+	}
+
 	.grid {
 		display: flex;
 	}
 
 	#navName-desc {
-		padding-right: 21rem;
+		padding-right: 26rem;
 	}
 
 	#navTab {
@@ -907,6 +916,8 @@ footer {
 	.scramble {
 		padding-left: 1.8rem;
 		padding-bottom: 1rem;
+		/* display none if you have socials at bottom */
+		display: none;
 	}
 
 	#nature-wall {
