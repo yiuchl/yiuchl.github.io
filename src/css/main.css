@@ -402,8 +402,6 @@ hr {
 }
 
 .carousel-container {
-	/* flex: 1;
-	order: 1; */
 	position: relative;
 	height: 35em;
 	display: flex;
