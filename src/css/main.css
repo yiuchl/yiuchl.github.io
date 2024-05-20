@@ -700,6 +700,14 @@ hr {
 	.scramble {
 		padding-left: 0;
 	}
+
+	.scroll-up {
+		display: none;
+	}
+
+	#scroll-up-arrow {
+		display: none;
+	}
 }
 
 @media only screen and (max-width: 1250px) {

@@ -63,30 +63,6 @@ scrambleEle.addEventListener("mouseout", () => {
 	scrambleEle.innerText = prescrambleText;
 });
 
-// heart
-// Get the span element by its ID
-const textSpan = document.getElementById("textSpan");
-// const textSpan2 = document.getElementById("textSpan2");
-
-// Define the text to change to on hover
-const newText = "⋆⁺₊⋆♥︎⋆⁺₊⋆";
-// const newText2 = "investigation *✩‧˚";
-
-// Add event listeners for mouseenter and mouseleave events
-textSpan.addEventListener("mouseenter", () => {
-	textSpan.textContent = newText;
-});
-// textSpan2.addEventListener("mouseenter", () => {
-// 	textSpan2.textContent = newText2;
-// });
-
-textSpan.addEventListener("mouseleave", () => {
-	textSpan.textContent = "and investigation.";
-});
-// textSpan2.addEventListener("mouseleave", () => {
-// 	textSpan2.textContent = "investigation";
-// });
-
 // Back to top!
 const scrollUp = document.querySelector("#scroll-up");
 
